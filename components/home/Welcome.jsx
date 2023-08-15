@@ -3,8 +3,11 @@ import React from 'react'
 import { styles } from './welcome.styles'
 import { COLORS, SIZES } from '../../constants/theme'
 import { Ionicons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 const Welcome = () => {
+  const navigation = useNavigation()
+
   return (
     <View>
       <View style={styles.container}>
@@ -36,7 +39,9 @@ const Welcome = () => {
         <View style={styles.searchWrapper}>
           <TextInput
             value=''
-            onPressIn={() => {}}
+            onPressIn={() => {
+              navigation.navigate('Search')
+            }}
             placeholder='What are you looking for'
             style={styles.searchInput}
           />
