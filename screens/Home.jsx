@@ -1,20 +1,21 @@
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { styles } from './home.styles'
-import { Ionicons } from '@expo/vector-icons'
-import { Welcome } from '../components/index'
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { styles } from "./home.styles";
+import { Ionicons } from "@expo/vector-icons";
+import { Carousel, Welcome } from "../components/index";
+import CarouselComponent from "../components/home/Carousel";
 
 const Home = () => {
   return (
     <SafeAreaView>
       <View style={styles.appBarWrapper}>
         <View style={styles.appBar}>
-          <Ionicons name='location-outline' size={24} />
+          <Ionicons name="location-outline" size={24} />
           <Text style={styles.locationText}>Shanghai, Chaina</Text>
           <View style={styles.cartWrapper}>
             <TouchableOpacity>
-              <Ionicons name='cart-outline' size={24} />
+              <Ionicons name="cart-outline" size={24} />
             </TouchableOpacity>
             <View style={styles.cartCount}>
               <Text style={styles.cartNumber}>1</Text>
@@ -24,9 +25,10 @@ const Home = () => {
       </View>
       <ScrollView>
         <Welcome />
+        <CarouselComponent />
       </ScrollView>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

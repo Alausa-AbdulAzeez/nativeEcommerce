@@ -1,3 +1,4 @@
-import Welcome from './home/Welcome'
+import Welcome from "./home/Welcome";
+import CarouselComponent from "./home/Carousel";
 
-export { Welcome }
+export { Welcome, CarouselComponent };
