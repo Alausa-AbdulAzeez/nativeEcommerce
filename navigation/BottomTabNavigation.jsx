@@ -17,7 +17,7 @@ const BottomTabNavigation = () => {
       bottom: 0,
       right: 0,
       left: 0,
-      height: 70,
+      height: 50,
     },
   }
   return (
