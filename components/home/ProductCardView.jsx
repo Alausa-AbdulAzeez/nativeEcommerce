@@ -4,10 +4,13 @@ import { styles } from "./productCardView.style";
 import IMG1 from "../../assets/images/fn1.jpg";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../../constants/theme";
+import { useNavigation } from "@react-navigation/native";
 
 const ProductCardView = () => {
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate("ProductDetails")}>
       <View style={styles.container}>
         <View style={styles.imgContainer}>
           <Image

@@ -6,6 +6,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
+import { ProductDetails } from "./screens/index";
 
 export default function App() {
   // FONTS
@@ -41,6 +42,7 @@ export default function App() {
           component={BottomTabNavigation}
           options={{ headerShown: false }}
         />
+        <Stack.Screen name="ProductDetails" component={ProductDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );
