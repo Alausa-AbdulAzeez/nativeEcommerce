@@ -1,7 +1,11 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./productDetails.styles";
-import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
+import {
+  Ionicons,
+  MaterialCommunityIcons,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
 import { COLORS } from "../constants/theme";
 
 const ProductDetails = ({ navigation }) => {
@@ -62,6 +66,27 @@ const ProductDetails = ({ navigation }) => {
             >
               <SimpleLineIcons name="plus" size={20} />
             </TouchableOpacity>
+          </View>
+        </View>
+        <View style={styles.descriptionWrapper}>
+          <Text style={styles.descriptionTitle}>Description</Text>
+          <Text style={styles.description}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            alias ex ullam error totam distinctio deleniti temporibus
+            dignissimos eum ab impedit, dolorem officia, commodi corporis
+            similique? Praesentium asperiores pariatur omnis. Aliquid, dolores?
+            Quam cupiditate quod delectus consequuntur eius, debitis ipsam hic
+            beatae?
+          </Text>
+        </View>
+        <View style={styles.locationAndDeliveryRow}>
+          <View style={styles.location}>
+            <Ionicons name="location-outline" size={20} />
+            <Text style={styles.locationText}>Shanghai</Text>
+          </View>
+          <View style={styles.delivery}>
+            <MaterialCommunityIcons name="truck-delivery-outline" size={20} />
+            <Text style={styles.deliveryText}> Free Delivery</Text>
           </View>
         </View>
       </View>

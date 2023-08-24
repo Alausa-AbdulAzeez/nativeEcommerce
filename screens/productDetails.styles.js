@@ -78,4 +78,34 @@ export const styles = StyleSheet.create({
     fontFamily: "medium",
     marginHorizontal: 8,
   },
+  descriptionWrapper: {
+    marginTop: SIZES.large * 2,
+    marginHorizontal: SIZES.large,
+  },
+  descriptionTitle: {
+    fontFamily: "medium",
+    fontSize: SIZES.large - 2,
+  },
+  description: {
+    textAlign: "justify",
+    fontFamily: "regular",
+    fontSize: SIZES.small,
+    marginBottom: SIZES.small,
+  },
+  locationAndDeliveryRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginHorizontal: 20,
+    backgroundColor: COLORS.secondary,
+    borderRadius: SIZES.large,
+    padding: 5,
+  },
+  location: { flexDirection: "row" },
+  locationText: {
+    marginHorizontal: 3,
+  },
+  delivery: { flexDirection: "row" },
+  deliveryText: {
+    marginLeft: 3,
+  },
 });
