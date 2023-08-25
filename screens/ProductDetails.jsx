@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./productDetails.styles";
 import {
+  Fontisto,
   Ionicons,
   MaterialCommunityIcons,
   SimpleLineIcons,
@@ -87,6 +88,15 @@ const ProductDetails = ({ navigation }) => {
           <View style={styles.delivery}>
             <MaterialCommunityIcons name="truck-delivery-outline" size={20} />
             <Text style={styles.deliveryText}> Free Delivery</Text>
+          </View>
+        </View>
+        <View style={styles.buyNowAndBagRow}>
+          <TouchableOpacity style={styles.buyNowBtn}>
+            <Text style={styles.buyNowText}>BUY NOW</Text>
+          </TouchableOpacity>
+
+          <View style={styles.bag}>
+            <Fontisto name="shopping-bag" size={20} />
           </View>
         </View>
       </View>

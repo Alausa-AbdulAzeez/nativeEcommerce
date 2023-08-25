@@ -99,6 +99,7 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     borderRadius: SIZES.large,
     padding: 5,
+    marginBottom: SIZES.small,
   },
   location: { flexDirection: "row" },
   locationText: {
@@ -107,5 +108,23 @@ export const styles = StyleSheet.create({
   delivery: { flexDirection: "row" },
   deliveryText: {
     marginLeft: 3,
+  },
+  buyNowAndBagRow: {
+    flexDirection: "row",
+    marginHorizontal: 20,
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  buyNowBtn: {
+    backgroundColor: COLORS.black,
+    width: "70%",
+    padding: SIZES.small - 3,
+    borderRadius: SIZES.large,
+  },
+  buyNowText: {
+    color: COLORS.lightWhite,
+    fontSize: SIZES.medium,
+    fontFamily: "semiBold",
+    textAlign: "center",
   },
 });
