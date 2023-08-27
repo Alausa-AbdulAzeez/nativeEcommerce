@@ -11,7 +11,7 @@ const ProductCardView = ({ item }) => {
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("ProductDetails", item)}
+      onPress={() => navigation.navigate("ProductDetails", { item })}
     >
       <View style={styles.container}>
         <View style={styles.imgContainer}>
