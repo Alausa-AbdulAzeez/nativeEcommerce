@@ -34,4 +34,22 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: SIZES.medium,
   },
+  noResultContainer: {
+    // backgroundColor: 'blue',
+    height: '100%',
+    // height: 100,
+    // alignItems: 'center',
+    // flex: 1,
+  },
+  noResultImage: {
+    objectFit: 'contain',
+    // resizeMode: 'contain',
+    // objectFit: 'cover',
+    // backgroundColor: 'red',
+    // marginVertical: 'auto',
+
+    height: SIZES.height - 250,
+    width: SIZES.width - 80,
+    marginLeft: 20,
+  },
 })
