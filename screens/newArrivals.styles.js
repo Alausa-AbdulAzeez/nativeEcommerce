@@ -27,6 +27,6 @@ export const styles = StyleSheet.create({
     fontFamily: "semiBold",
     fontSize: SIZES.medium,
     color: COLORS.lightWhite,
-    marginLeft: 5,
+    marginLeft: 8,
   },
 });

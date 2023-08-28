@@ -3,7 +3,7 @@ import { COLORS, SIZES } from "../../constants/theme";
 
 export const styles = StyleSheet.create({
   container: {
-    width: 182,
+    width: 162,
     height: 240,
     marginEnd: 22,
     borderRadius: SIZES.medium,

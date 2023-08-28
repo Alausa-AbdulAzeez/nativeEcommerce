@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./newArrivals.styles";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/theme";
+import ProductsList from "../components/ProductsList";
 
 const NewArrivals = ({ navigation }) => {
   return (
@@ -19,6 +20,7 @@ const NewArrivals = ({ navigation }) => {
           </TouchableOpacity>
           <Text style={styles.heading}>Products</Text>
         </View>
+        <ProductsList />
       </View>
     </SafeAreaView>
   );
