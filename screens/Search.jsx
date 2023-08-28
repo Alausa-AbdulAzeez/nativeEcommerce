@@ -1,10 +1,18 @@
 import { Ionicons } from '@expo/vector-icons'
 import React, { useState } from 'react'
-import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import {
+  FlatList,
+  Image,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS } from '../constants/theme'
 import { styles } from './search.styles'
 import axios from 'axios'
+import { SearchTile } from '../components'
 
 const Search = () => {
   // SEARCH VARIABLE
@@ -16,13 +24,12 @@ const Search = () => {
   // FUNCTION TO HANDLE SEARCH ICON PRESS
   const handleSearch = async () => {
     try {
-      console.log('loading..')
       const response = await axios.get(
-        `http://192.168.1.108:3000/api/product/search?key=${searchKey}`
+        `http://192.168.43.131:3000/api/product/search?key=${searchKey}`
       )
       setSearchResult(response.data)
     } catch (error) {
-      console.log(error)
+      setSearchResult([])
     }
   }
   // END OF FUNCTION TO HANDLE SEARCH ICON PRESS
@@ -54,7 +61,11 @@ const Search = () => {
           />
         </View>
       ) : (
-        <Text>Hello</Text>
+        <FlatList
+          data={searchResult}
+          keyExtractor={(item) => item?._id}
+          renderItem={({ item }) => <SearchTile item={item} />}
+        />
       )}
     </SafeAreaView>
   )
