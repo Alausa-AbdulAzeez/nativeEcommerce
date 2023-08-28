@@ -65,6 +65,7 @@ const Search = () => {
           data={searchResult}
           keyExtractor={(item) => item?._id}
           renderItem={({ item }) => <SearchTile item={item} />}
+          style={{ marginHorizontal: 12 }}
         />
       )}
     </SafeAreaView>
